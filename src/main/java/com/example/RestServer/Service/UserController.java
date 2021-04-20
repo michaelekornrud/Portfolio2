@@ -1,21 +1,32 @@
 package com.example.RestServer.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.swing.text.html.HTML;
 import java.util.List;
 
-@RestController
+@Controller
 public class UserController {
 
     //Call to use methods from UserService class
-    /*@Autowired
-    private UserService userService;*/
+    @Autowired
+    private UserService userService;
 
     @GetMapping("/")
+    public String  index  () {return "home"; }
+
+    @GetMapping("/home")
     public String homePage () {
-        return "This is the homepage for Michael Ekornrud, Portfolio 2 DATA2410\n Vilde er bestest i verden";
+        return "home";
     }
+
+    @GetMapping("/products")
+    public String productPage () {return "products"; }
+
+    @GetMapping ("/info")
+    public String infoPage () {return "info"; }
 
 
 
