@@ -1,4 +1,4 @@
-package com.example.RestServer.Service;
+package com.example.RestServer.UserService;
 
 import org.springframework.stereotype.Service;
 
